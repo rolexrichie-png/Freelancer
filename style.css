@@ -303,3 +303,61 @@ body {
   }
 
 }
+
+/* =========================================
+   CONTACT PAGE
+========================================= */
+
+.contact-grid {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.contact-card {
+  padding: 40px 30px;
+  text-align: center;
+  background: #0b101c;
+  border: 1px solid #172a45;
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+.contact-card:hover {
+  border-color: #087cff;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 124, 255, 0.15);
+}
+
+.contact-icon {
+  font-size: 55px;
+  margin-bottom: 15px;
+}
+
+.contact-card h2 {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.contact-card p {
+  color: #b9c2d3;
+  margin-bottom: 18px;
+}
+
+.contact-detail {
+  color: #1688ff;
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 25px;
+  word-break: break-word;
+}
+
+@media (max-width: 700px) {
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
