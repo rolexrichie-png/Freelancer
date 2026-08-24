@@ -1,7 +1,13 @@
-/* =========================================
-   DANNY HUB — MAIN STYLESHEET
-   Black + Blue | Cambria | Bold Design
-========================================= */
+/* =========================================================
+   DANNY HUB
+   MASTER STYLESHEET
+   Black + Blue | Cambria | Professional Layout
+========================================================= */
+
+
+/* =========================================================
+   1. RESET
+========================================================= */
 
 * {
   margin: 0;
@@ -15,124 +21,207 @@ html {
 
 body {
   font-family: Cambria, Georgia, serif;
-  background: #05070d;
+  background: #05070c;
   color: #ffffff;
   line-height: 1.6;
   font-weight: 700;
 }
 
-/* =========================================
-   HEADER
-========================================= */
+a {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: Cambria, Georgia, serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* =========================================================
+   2. GLOBAL CONTAINER
+========================================================= */
+
+.header,
+.section,
+.why-section,
+.cta,
+.footer {
+  width: 100%;
+}
+
+.section,
+.why-section {
+  padding: 90px 7%;
+}
+
+
+/* =========================================================
+   3. HEADER / NAVIGATION
+========================================================= */
 
 .header {
-  width: 100%;
-  min-height: 75px;
-  padding: 18px 7%;
+  min-height: 78px;
+  padding: 15px 7%;
+
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background: #03050a;
-  border-bottom: 2px solid #087cff;
+  justify-content: space-between;
+  gap: 25px;
+
+  background: rgba(3, 5, 10, 0.97);
+  border-bottom: 1px solid #123d70;
+
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 .logo {
-  font-size: 27px;
+  font-size: 26px;
   font-weight: 900;
   letter-spacing: 2px;
-  color: #ffffff;
+  white-space: nowrap;
 }
 
 .logo span {
-  color: #087cff;
+  color: #1688ff;
 }
 
 .nav {
   display: flex;
-  gap: 25px;
   align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .nav a {
-  color: #ffffff;
+  padding: 9px 12px;
+
+  color: #dce8f7;
   text-decoration: none;
-  font-size: 16px;
+
+  font-size: 15px;
   font-weight: 900;
-  transition: 0.3s;
+
+  border-radius: 6px;
+
+  transition: 0.25s ease;
 }
 
 .nav a:hover {
-  color: #087cff;
+  color: #ffffff;
+  background: #087cff;
 }
 
-/* =========================================
-   HERO
-========================================= */
+
+/* =========================================================
+   4. HERO
+========================================================= */
 
 .hero {
-  min-height: 620px;
+  min-height: 610px;
   padding: 100px 7%;
+
   display: flex;
   align-items: center;
+
   background:
-    radial-gradient(circle at 80% 20%, rgba(0, 119, 255, 0.25), transparent 35%),
-    linear-gradient(135deg, #020308, #07152b, #03050a);
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(8, 124, 255, 0.22),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      #020308 0%,
+      #061326 50%,
+      #03050a 100%
+    );
+
+  border-bottom: 1px solid #0d2747;
 }
 
 .hero-content {
+  width: 100%;
   max-width: 850px;
 }
 
 .welcome {
-  color: #1688ff;
-  font-size: 17px;
-  letter-spacing: 3px;
   margin-bottom: 15px;
+
+  color: #1688ff;
+
+  font-size: 15px;
   font-weight: 900;
+  letter-spacing: 3px;
 }
 
 .hero h1 {
-  font-size: clamp(45px, 7vw, 82px);
-  line-height: 1.05;
   margin-bottom: 25px;
+
+  font-size: clamp(46px, 7vw, 82px);
+  line-height: 1.02;
   font-weight: 900;
+  letter-spacing: -1px;
 }
 
 .hero h1 span {
   display: block;
-  color: #087cff;
+  color: #1688ff;
 }
 
 .hero-text {
   max-width: 700px;
-  color: #d5dbea;
-  font-size: 20px;
   margin-bottom: 35px;
+
+  color: #c5d0df;
+
+  font-size: 19px;
   font-weight: 700;
 }
 
-/* =========================================
-   BUTTONS
-========================================= */
+
+/* =========================================================
+   5. BUTTONS
+========================================================= */
 
 .hero-buttons {
   display: flex;
-  gap: 15px;
   flex-wrap: wrap;
+  gap: 14px;
 }
 
 .btn {
-  display: inline-block;
-  padding: 14px 25px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 900;
-  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+  padding: 12px 24px;
+
   border: 2px solid #087cff;
+  border-radius: 7px;
+
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .btn.primary {
@@ -141,8 +230,9 @@ body {
 }
 
 .btn.primary:hover {
-  background: #005dcc;
-  transform: translateY(-3px);
+  background: #0068dc;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(8, 124, 255, 0.25);
 }
 
 .btn.secondary {
@@ -152,293 +242,80 @@ body {
 
 .btn.secondary:hover {
   background: #087cff;
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
-/* =========================================
-   GENERAL SECTIONS
-========================================= */
+
+/* =========================================================
+   6. SECTION HEADINGS
+========================================================= */
 
 .section {
-  padding: 90px 7%;
-  background: #070a12;
+  background: #070a11;
 }
 
 .section-title {
+  max-width: 800px;
+  margin: 0 auto 50px;
   text-align: center;
-  margin-bottom: 50px;
 }
 
 .section-title p {
-  color: #087cff;
-  font-size: 15px;
-  letter-spacing: 3px;
+  margin-bottom: 7px;
+
+  color: #1688ff;
+
+  font-size: 14px;
   font-weight: 900;
+  letter-spacing: 3px;
 }
 
 .section-title h2 {
-  font-size: 40px;
-  margin-top: 8px;
+  color: #ffffff;
+
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.1;
   font-weight: 900;
 }
 
-/* =========================================
-   SERVICE CARDS
-========================================= */
+
+/* =========================================================
+   7. SERVICE GRID
+========================================================= */
 
 .service-grid {
+  width: 100%;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  gap: 24px;
 }
 
 .service-card {
+  min-height: 300px;
   padding: 30px;
-  background: #0b101c;
-  border: 1px solid #172a45;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #0b1019;
+
+  border: 1px solid #172c48;
   border-radius: 14px;
-  transition: 0.3s;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-7px);
-  border-color: #087cff;
-  box-shadow: 0 10px 35px rgba(0, 124, 255, 0.15);
-}
-
-.service-icon {
-  font-size: 38px;
-  margin-bottom: 15px;
-}
-
-.service-card h3 {
-  color: #
-
-   /* =========================================
-   SERVICE PRICES
-========================================= */
-
-.price {
-  color: #1688ff;
-  font-size: 28px;
-  font-weight: 900;
-  margin-top: 15px;
-  letter-spacing: 1px;
-}
-
-/* =========================================
-   PORTFOLIO
-========================================= */
-
-.portfolio-empty {
-  max-width: 700px;
-  margin: auto;
-  padding: 60px 30px;
-  text-align: center;
-  background: #0b101c;
-  border: 1px solid #172a45;
-  border-radius: 16px;
-}
-
-.portfolio-icon {
-  font-size: 65px;
-  margin-bottom: 20px;
-}
-
-.portfolio-empty h2 {
-  font-size: 32px;
-  margin-bottom: 15px;
-  color: #ffffff;
-}
-
-.portfolio-empty p {
-  color: #b9c2d3;
-  font-size: 17px;
-  margin-bottom: 30px;
-}
-
-/* =========================================
-   ABOUT PAGE
-========================================= */
-
-.about-content {
-  max-width: 1100px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-
-.about-card {
-  background: #0b101c;
-  border: 1px solid #172a45;
-  border-radius: 14px;
-  padding: 30px;
-  transition: 0.3s;
-}
-
-.about-card:hover {
-  border-color: #087cff;
   transform: translateY(-5px);
-}
 
-.about-card h2 {
-  color: #1688ff;
-  font-size: 25px;
-  margin-bottom: 15px;
-}
-
-.about-card p {
-  color: #b9c2d3;
-  margin-bottom: 15px;
-  font-size: 16px;
-}
-
-@media (max-width: 850px) {
-
-  .about-content {
-    grid-template-columns: 1fr;
-  }
-
-}
-
-/* =========================================
-   CONTACT PAGE
-========================================= */
-
-.contact-grid {
-  max-width: 900px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-}
-
-.contact-card {
-  padding: 40px 30px;
-  text-align: center;
-  background: #0b101c;
-  border: 1px solid #172a45;
-  border-radius: 16px;
-  transition: 0.3s;
-}
-
-.contact-card:hover {
   border-color: #087cff;
-  transform: translateY(-6px);
-  box-shadow: 0 12px 35px rgba(0, 124, 255, 0.15);
-}
 
-.contact-icon {
-  font-size: 55px;
-  margin-bottom: 15px;
-}
-
-.contact-card h2 {
-  font-size: 30px;
-  margin-bottom: 12px;
-}
-
-.contact-card p {
-  color: #b9c2d3;
-  margin-bottom: 18px;
-}
-
-.contact-detail {
-  color: #1688ff;
-  font-size: 20px;
-  font-weight: 900;
-  margin-bottom: 25px;
-  word-break: break-word;
-}
-
-@media (max-width: 700px) {
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-}
-
-/* =========================================
-   ORDER PAGE
-========================================= */
-
-.order-hero {
-  min-height: 430px;
-}
-
-.order-container {
-  max-width: 750px;
-  margin: auto;
-}
-
-.order-form {
-  background: #0b101c;
-  border: 1px solid #172a45;
-  border-radius: 16px;
-  padding: 35px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
-}
-
-.order-form label {
-  display: block;
-  color: #ffffff;
-  font-size: 17px;
-  font-weight: 900;
-  margin-bottom: 8px;
-  margin-top: 20px;
-}
-
-.order-form label:first-child {
-  margin-top: 0;
-}
-
-.order-form input,
-.order-form select,
-.order-form textarea {
-  width: 100%;
-  padding: 15px;
-  border: 1px solid #263b59;
-  border-radius: 8px;
-  background: #05070d;
-  color: #ffffff;
-  font-family: Cambria, Georgia, serif;
-  font-size: 16px;
-  font-weight: 700;
-  outline: none;
-}
-
-.order-form input:focus,
-.order-form select:focus,
-.order-form textarea:focus {
-  border-color: #087cff;
-  box-shadow: 0 0 0 2px rgba(8, 124, 255, 0.15);
-}
-
-.order-form textarea {
-  resize: vertical;
-  min-height: 150px;
-}
-
-.order-form select option {
-  background: #05070d;
-  color: #ffffff;
-}
-
-.order-button {
-  width: 100%;
-  margin-top: 30px;
-  cursor: pointer;
-  font-family: Cambria, Georgia, serif;
-}
-
-@media (max-width: 600px) {
-
-  .order-form {
-    padding: 25px 20px;
-  }
-
-}
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.35),
+    0 0 20px rgba(8, 124, 
