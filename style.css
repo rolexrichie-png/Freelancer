@@ -1,1 +1,217 @@
+/* =========================================
+   DANNY HUB — MAIN STYLESHEET
+   Black + Blue | Cambria | Bold Design
+========================================= */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Cambria, Georgia, serif;
+  background: #05070d;
+  color: #ffffff;
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+  width: 100%;
+  min-height: 75px;
+  padding: 18px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #03050a;
+  border-bottom: 2px solid #087cff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.logo span {
+  color: #087cff;
+}
+
+.nav {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 900;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #087cff;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  min-height: 620px;
+  padding: 100px 7%;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(0, 119, 255, 0.25), transparent 35%),
+    linear-gradient(135deg, #020308, #07152b, #03050a);
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.welcome {
+  color: #1688ff;
+  font-size: 17px;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+  font-weight: 900;
+}
+
+.hero h1 {
+  font-size: clamp(45px, 7vw, 82px);
+  line-height: 1.05;
+  margin-bottom: 25px;
+  font-weight: 900;
+}
+
+.hero h1 span {
+  display: block;
+  color: #087cff;
+}
+
+.hero-text {
+  max-width: 700px;
+  color: #d5dbea;
+  font-size: 20px;
+  margin-bottom: 35px;
+  font-weight: 700;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 900;
+  transition: 0.3s;
+  border: 2px solid #087cff;
+}
+
+.btn.primary {
+  background: #087cff;
+  color: #ffffff;
+}
+
+.btn.primary:hover {
+  background: #005dcc;
+  transform: translateY(-3px);
+}
+
+.btn.secondary {
+  background: transparent;
+  color: #ffffff;
+}
+
+.btn.secondary:hover {
+  background: #087cff;
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+.section {
+  padding: 90px 7%;
+  background: #070a12;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title p {
+  color: #087cff;
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-weight: 900;
+}
+
+.section-title h2 {
+  font-size: 40px;
+  margin-top: 8px;
+  font-weight: 900;
+}
+
+/* =========================================
+   SERVICE CARDS
+========================================= */
+
+.service-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.service-card {
+  padding: 30px;
+  background: #0b101c;
+  border: 1px solid #172a45;
+  border-radius: 14px;
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-7px);
+  border-color: #087cff;
+  box-shadow: 0 10px 35px rgba(0, 124, 255, 0.15);
+}
+
+.service-icon {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  color: #
