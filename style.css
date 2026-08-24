@@ -227,3 +227,34 @@ body {
   margin-top: 15px;
   letter-spacing: 1px;
 }
+
+/* =========================================
+   PORTFOLIO
+========================================= */
+
+.portfolio-empty {
+  max-width: 700px;
+  margin: auto;
+  padding: 60px 30px;
+  text-align: center;
+  background: #0b101c;
+  border: 1px solid #172a45;
+  border-radius: 16px;
+}
+
+.portfolio-icon {
+  font-size: 65px;
+  margin-bottom: 20px;
+}
+
+.portfolio-empty h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.portfolio-empty p {
+  color: #b9c2d3;
+  font-size: 17px;
+  margin-bottom: 30px;
+}
