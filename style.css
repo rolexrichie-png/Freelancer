@@ -361,3 +361,84 @@ body {
   }
 
 }
+
+/* =========================================
+   ORDER PAGE
+========================================= */
+
+.order-hero {
+  min-height: 430px;
+}
+
+.order-container {
+  max-width: 750px;
+  margin: auto;
+}
+
+.order-form {
+  background: #0b101c;
+  border: 1px solid #172a45;
+  border-radius: 16px;
+  padding: 35px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.order-form label {
+  display: block;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 900;
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
+.order-form label:first-child {
+  margin-top: 0;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #263b59;
+  border-radius: 8px;
+  background: #05070d;
+  color: #ffffff;
+  font-family: Cambria, Georgia, serif;
+  font-size: 16px;
+  font-weight: 700;
+  outline: none;
+}
+
+.order-form input:focus,
+.order-form select:focus,
+.order-form textarea:focus {
+  border-color: #087cff;
+  box-shadow: 0 0 0 2px rgba(8, 124, 255, 0.15);
+}
+
+.order-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.order-form select option {
+  background: #05070d;
+  color: #ffffff;
+}
+
+.order-button {
+  width: 100%;
+  margin-top: 30px;
+  cursor: pointer;
+  font-family: Cambria, Georgia, serif;
+}
+
+@media (max-width: 600px) {
+
+  .order-form {
+    padding: 25px 20px;
+  }
+
+}
