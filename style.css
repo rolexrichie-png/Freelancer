@@ -215,3 +215,15 @@ body {
 
 .service-card h3 {
   color: #
+
+   /* =========================================
+   SERVICE PRICES
+========================================= */
+
+.price {
+  color: #1688ff;
+  font-size: 28px;
+  font-weight: 900;
+  margin-top: 15px;
+  letter-spacing: 1px;
+}
