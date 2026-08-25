@@ -6,216 +6,135 @@
 
   <title>Danny Hub | Freelance Services</title>
 
-  <link rel="stylesheet" href="style.css">
-</head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-<body>
+    html {
+      scroll-behavior: smooth;
+    }
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="logo">DANNY <span>HUB</span></div>
+    body {
+      background: #02060d;
+      color: #fff;
+      line-height: 1.5;
+      padding-bottom: 85px;
+    }
 
-    <nav class="nav">
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="portfolio.html">Portfolio</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-  <a href="order.html">Order</a>
-    </nav>
-  </header>
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
+    /* ================= HEADER ================= */
 
-  <!-- HERO -->
-  <section class="hero">
+    header {
+      width: 100%;
+      padding: 20px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(0, 119, 255, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(2, 6, 13, 0.95);
+      backdrop-filter: blur(12px);
+    }
 
-    <div class="hero-content">
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
 
-      <p class="welcome">WELCOME TO DANNY HUB</p>
+    .logo span {
+      color: #087cff;
+    }
 
-      <h1>
-        Professional Digital
-        <span>Services</span>
-      </h1>
+    .nav {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
 
-      <p class="hero-text">
-        Need professional graphics, video editing, social media services,
-        website creation or online tasks? Danny Hub is here to help.
-      </p>
+    .nav a {
+      color: #ddd;
+      font-size: 15px;
+      transition: 0.3s;
+    }
 
-      <div class="hero-buttons">
-        <a href="services.html" class="btn primary">
-          VIEW SERVICES
-        </a>
+    .nav a:hover,
+    .nav a.active {
+      color: #087cff;
+    }
 
-        <a href="contact.html" class="btn secondary">
-          CONTACT ME
-        </a>
-      </div>
+    .order-btn {
+      background: linear-gradient(135deg, #087cff, #0054d9);
+      padding: 12px 20px;
+      border-radius: 9px;
+      font-weight: bold;
+      box-shadow: 0 0 20px rgba(0, 119, 255, 0.25);
+      transition: 0.3s;
+    }
 
-    </div>
+    .order-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 30px rgba(0, 119, 255, 0.45);
+    }
 
-  </section>
+    /* ================= HERO ================= */
 
+    .container {
+      width: 92%;
+      max-width: 1250px;
+      margin: auto;
+    }
 
-  <!-- SERVICES PREVIEW -->
-  <section class="section">
+    .hero {
+      margin-top: 25px;
+      min-height: 350px;
+      padding: 55px;
+      border: 1px solid #086cff;
+      border-radius: 22px;
+      background:
+        radial-gradient(circle at 75% 40%, rgba(0, 93, 255, 0.35), transparent 35%),
+        linear-gradient(135deg, #02050b, #031536);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
 
-    <div class="section-title">
-      <p>WHAT I OFFER</p>
-      <h2>MY MAIN SERVICES</h2>
-    </div>
+    .hero-content {
+      max-width: 650px;
+      position: relative;
+      z-index: 2;
+    }
 
-    <div class="service-grid">
+    .welcome {
+      display: inline-block;
+      background: #073b91;
+      padding: 6px 15px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
 
-      <div class="service-card">
-        <div class="service-icon">🎨</div>
-        <h3>Graphics Design</h3>
-        <p>
-          Professional flyers, banners, posters, logos,
-          social media designs and other graphics.
-        </p>
-      </div>
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 70px);
+      line-height: 1;
+      margin-bottom: 15px;
+    }
 
-      <div class="service-card">
-        <div class="service-icon">🎬</div>
-        <h3>Video Editing</h3>
-        <p>
-          Clean and engaging video editing for social media,
-          adverts, events and personal projects.
-        </p>
-      </div>
+    .hero h1 span {
+      color: #087cff;
+    }
 
-      <div class="service-card">
-        <div class="service-icon">📱</div>
-        <h3>Social Media Services</h3>
-        <p>
-          Social media content, page management and
-          other digital services.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">🌐</div>
-        <h3>Website Creation</h3>
-        <p>
-          Modern and responsive websites for businesses,
-          personal brands and online projects.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">✍️</div>
-        <h3>Writing</h3>
-        <p>
-          Articles, descriptions, promotional content
-          and other legitimate writing tasks.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">💼</div>
-        <h3>Other Online Tasks</h3>
-        <p>
-          Need help with another digital task?
-          Contact Danny Hub to discuss your project.
-        </p>
-      </div>
-
-    </div>
-
-    <div class="center-button">
-      <a href="services.html" class="btn primary">
-        SEE ALL SERVICES & PRICES
-      </a>
-    </div>
-
-  </section>
-
-
-  <!-- WHY CHOOSE US -->
-  <section class="why-section">
-
-    <div class="section-title">
-      <p>WHY DANNY HUB</p>
-      <h2>QUALITY DIGITAL SERVICES</h2>
-    </div>
-
-    <div class="why-grid">
-
-      <div class="why-card">
-        <strong>01</strong>
-        <h3>Professional Work</h3>
-        <p>
-          Every project is handled with attention to quality
-          and presentation.
-        </p>
-      </div>
-
-      <div class="why-card">
-        <strong>02</strong>
-        <h3>Affordable Prices</h3>
-        <p>
-          Clear pricing designed to give customers
-          good value for their money.
-        </p>
-      </div>
-
-      <div class="why-card">
-        <strong>03</strong>
-        <h3>Customer Focused</h3>
-        <p>
-          Your requirements come first, with clear
-          communication throughout the project.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- CALL TO ACTION -->
-  <section class="cta">
-
-    <h2>READY TO START YOUR PROJECT?</h2>
-
-    <p>
-      Choose a service and let's get started.
-    </p>
-
-    <a href="contact.html" class="btn primary">
-      GET STARTED
-    </a>
-
-  </section>
-
-
-  <!-- FOOTER -->
-  <footer class="footer">
-
-    <div class="logo">DANNY <span>HUB</span></div>
-
-    <p>
-      Professional Digital & Freelance Services
-    </p>
-
-    <p>
-      WhatsApp: 07014939418
-    </p>
-
-    <p>
-      Email: pennyyise@gmail.com
-    </p>
-
-    <div class="copyright">
-      © 2026 Danny Hub. All Rights Reserved.
-    </div>
-
-  </footer>
-
-
-  <script src="script.js"></script>
-
-</body>
-    </html>
+    .hero h2 {
+      font-size: 23
