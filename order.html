@@ -4,628 +4,153 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Danny Hub | Place an Order</title>
-
-  <link rel="stylesheet" href="style.css">
+  <title>Danny Hub | Place Order</title>
 
   <style>
-    /* =========================================
-       ORDER PAGE
-    ========================================= */
+    /* ==================================================
+       DANNY HUB - ORDER PAGE
+       ================================================== */
 
-    .order-hero {
-      min-height: 430px;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
-    .order-container {
-      max-width: 750px;
-      margin: auto;
+    html {
+      scroll-behavior: smooth;
     }
 
-    .order-form {
-      background: #0b101c;
-      border: 1px solid #172a45;
-      border-radius: 16px;
-      padding: 35px;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
-    }
-
-    .order-form label {
-      display: block;
+    body {
+      background: #02060d;
       color: #ffffff;
-      font-size: 17px;
-      font-weight: 900;
-      margin: 20px 0 8px;
+      line-height: 1.5;
+      min-height: 100vh;
+      padding-bottom: 50px;
     }
 
-    .order-form label:first-child {
-      margin-top: 0;
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
-    .order-form input,
-    .order-form select,
-    .order-form textarea {
+    button,
+    input,
+    select,
+    textarea {
+      font-family: inherit;
+    }
+
+    /* ==================================================
+       HEADER
+       ================================================== */
+
+    header {
       width: 100%;
-      padding: 15px;
-      border: 1px solid #263b59;
-      border-radius: 8px;
-      background: #05070d;
-      color: #ffffff;
-      font-family: Cambria, Georgia, serif;
-      font-size: 16px;
-      font-weight: 700;
-      outline: none;
-    }
-
-    .order-form input:focus,
-    .order-form select:focus,
-    .order-form textarea:focus {
-      border-color: #087cff;
-      box-shadow: 0 0 0 2px rgba(8, 124, 255, 0.15);
-    }
-
-    .order-form textarea {
-      resize: vertical;
-      min-height: 150px;
-    }
-
-    .order-form select option {
-      background: #05070d;
-      color: #ffffff;
-    }
-
-    /* BUDGET */
-
-    .input-prefix {
+      padding: 18px 5%;
+      background: rgba(3, 9, 18, 0.97);
+      border-bottom: 1px solid #12304f;
       display: flex;
       align-items: center;
-      width: 100%;
-      background: #05070d;
-      border: 1px solid #263b59;
-      border-radius: 8px;
-      overflow: hidden;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    .input-prefix span {
-      padding: 15px;
-      color: #1688ff;
-      font-size: 18px;
-      font-weight: 900;
-      background: #080d17;
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 1px;
     }
 
-    .input-prefix input {
-      border: none;
-      border-radius: 0;
-      flex: 1;
-      box-shadow: none;
+    .logo span {
+      color: #087cff;
     }
 
-    /* DATE */
-
-    .date-input {
-      color-scheme: dark;
+    .back-home {
+      color: #a9b8c9;
+      font-size: 14px;
+      transition: 0.3s;
     }
 
-    /* PRICE DISPLAY */
+    .back-home:hover {
+      color: #087cff;
+    }
 
-    .selected-price {
-      margin-top: 15px;
-      padding: 15px;
-      background: #07152b;
-      border: 1px solid #087cff;
-      border-radius: 8px;
+    /* ==================================================
+       MAIN CONTAINER
+       ================================================== */
+
+    .container {
+      width: 92%;
+      max-width: 1050px;
+      margin: 30px auto;
+    }
+
+    /* ==================================================
+       PAGE TITLE
+       ================================================== */
+
+    .page-title {
       text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #073b91;
       color: #ffffff;
+      padding: 6px 15px;
+      border-radius: 30px;
+      font-size: 11px;
+      font-weight: bold;
+      margin-bottom: 12px;
     }
 
-    .selected-price span {
-      display: block;
-      color: #1688ff;
-      font-size: 25px;
-      font-weight: 900;
-      margin-top: 5px;
+    .page-title h1 {
+      font-size: clamp(35px, 7vw, 52px);
+      line-height: 1.1;
+      margin-bottom: 10px;
     }
 
-    /* BUTTON */
-
-    .order-button {
-      width: 100%;
-      margin-top: 30px;
-      cursor: pointer;
-      font-family: Cambria, Georgia, serif;
+    .page-title h1 span {
+      color: #087cff;
     }
 
-    /* MOBILE */
-
-    @media (max-width: 600px) {
-      .order-form {
-        padding: 25px 20px;
-      }
+    .page-title p {
+      color: #9ba8b8;
+      font-size: 14px;
     }
-  </style>
-</head>
 
-<body>
-
-  <!-- HEADER -->
-  <header class="header">
-
-    <div class="logo">
-      DANNY <span>HUB</span>
-    </div>
-
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="order.html">Order</a>
-    </nav>
-
-  </header>
-
-
-  <!-- HERO -->
-  <section class="hero order-hero">
-
-    <div class="hero-content">
-
-      <p class="welcome">DANNY HUB</p>
-
-      <h1>
-        Start Your
-        <span>Project</span>
-      </h1>
-
-      <p class="hero-text">
-        Tell us what you need and send your project
-        request directly to Danny Hub on WhatsApp.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <!-- ORDER FORM -->
-  <section class="section">
-
-    <div class="section-title">
-
-      <p>PROJECT REQUEST</p>
-
-      <h2>PLACE YOUR ORDER</h2>
-
-    </div>
-
-
-    <div class="order-container">
-
-      <form id="orderForm" class="order-form">
-
-
-        <!-- NAME -->
-
-        <label for="customerName">
-          Your Name
-        </label>
-
-        <input
-          type="text"
-          id="customerName"
-          placeholder="Enter your full name"
-          required
-        >
-
-
-        <!-- SERVICE -->
-
-        <label for="service">
-          Choose a Service
-        </label>
-
-        <select id="service" required>
-
-          <option value="">
-            Select a service
-          </option>
-
-          <option
-            value="Graphics Design"
-            data-price="₦2,000"
-          >
-            Graphics Design — From ₦2,000
-          </option>
-
-          <option
-            value="Video Editing"
-            data-price="₦3,000"
-          >
-            Video Editing — From ₦3,000
-          </option>
-
-          <option
-            value="Social Media Services"
-            data-price="₦2,500"
-          >
-            Social Media Services — From ₦2,500
-          </option>
-
-          <option
-            value="Website Creation"
-            data-price="₦10,000"
-          >
-            Website Creation — From ₦10,000
-          </option>
-
-          <option
-            value="Writing Services"
-            data-price="₦2,000"
-          >
-            Writing Services — From ₦2,000
-          </option>
-
-          <option
-            value="Other Online Tasks"
-            data-price="Contact for Price"
-          >
-            Other Online Tasks — Contact for Price
-          </option>
-
-        </select>
-
-
-        <!-- PRICE DISPLAY -->
-
-        <div
-          class="selected-price"
-          id="priceDisplay"
-          style="display: none;"
-        >
-
-          Starting Price
-
-          <span id="priceText">
-            -
-          </span>
-
-        </div>
-
-
-        <!-- BUDGET -->
-
-        <label for="budget">
-          Your Budget
-        </label>
-
-        <div class="input-prefix">
-
-          <span>₦</span>
-
-          <input
-            type="number"
-            id="budget"
-            placeholder="Enter your budget"
-            min="0"
-          >
-
-        </div>
-
-
-        <!-- PROJECT DETAILS -->
-
-        <label for="projectDetails">
-          Project Details
-        </label>
-
-        <textarea
-          id="projectDetails"
-          rows="7"
-          placeholder="Explain exactly what you want us to create or do..."
-          required
-        ></textarea>
-
-
-        <!-- DELIVERY DATE -->
-
-        <label for="deadline">
-          Preferred Delivery Date
-        </label>
-
-        <input
-          type="date"
-          id="deadline"
-          class="date-input"
-        >
-
-
-        <!-- SUBMIT -->
-
-        <button
-          type="submit"
-          class="btn primary order-button"
-        >
-          SEND ORDER ON WHATSAPP
-        </button>
-
-      </form>
-
-    </div>
-
-  </section>
-
-
-  <!-- IMPORTANT NOTE -->
-
-  <section class="why-section">
-
-    <div class="section-title">
-
-      <p>IMPORTANT</p>
-
-      <h2>BEFORE SUBMITTING</h2>
-
-    </div>
-
-
-    <div class="why-grid">
-
-
-      <div class="why-card">
-
-        <strong>01</strong>
-
-        <h3>Describe Clearly</h3>
-
-        <p>
-          Give enough information about your project
-          so we can understand exactly what you need.
-        </p>
-
-      </div>
-
-
-      <div class="why-card">
-
-        <strong>02</strong>
-
-        <h3>Price Confirmation</h3>
-
-        <p>
-          Displayed prices are starting prices.
-          The final price will be confirmed before work begins.
-        </p>
-
-      </div>
-
-
-      <div class="why-card">
-
-        <strong>03</strong>
-
-        <h3>Discuss Before Payment</h3>
-
-        <p>
-          Make sure the service, price and project
-          requirements are agreed before payment.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </section>
-
-
-  <!-- CTA -->
-
-  <section class="cta">
-
-    <h2>
-      READY TO START?
-    </h2>
-
-    <p>
-      Contact Danny Hub today.
-    </p>
-
-    <a
-      href="https://wa.me/2347014939418"
-      target="_blank"
-      class="btn primary"
-    >
-      CHAT ON WHATSAPP
-    </a>
-
-  </section>
-
-
-  <!-- FOOTER -->
-
-  <footer class="footer">
-
-    <div class="logo">
-      DANNY <span>HUB</span>
-    </div>
-
-    <p>
-      Professional Digital & Freelance Services
-    </p>
-
-    <p>
-      WhatsApp: 07014939418
-    </p>
-
-    <p>
-      Email: pennyyise@gmail.com
-    </p>
-
-    <div class="copyright">
-      © 2026 Danny Hub. All Rights Reserved.
-    </div>
-
-  </footer>
-
-
-  <!-- JAVASCRIPT -->
-
-  <script>
-
-    const serviceSelect =
-      document.getElementById("service");
-
-    const priceDisplay =
-      document.getElementById("priceDisplay");
-
-    const priceText =
-      document.getElementById("priceText");
-
-
-    /* SHOW PRICE WHEN SERVICE IS SELECTED */
-
-    serviceSelect.addEventListener(
-      "change",
-      function () {
-
-        const selectedOption =
-          serviceSelect.options[
-            serviceSelect.selectedIndex
-          ];
-
-        const price =
-          selectedOption.getAttribute("data-price");
-
-
-        if (price) {
-
-          priceDisplay.style.display = "block";
-
-          priceText.textContent = price;
-
-        } else {
-
-          priceDisplay.style.display = "none";
-
-        }
-
-      }
-    );
-
-
-    /* SEND ORDER TO WHATSAPP */
-
-    document
-      .getElementById("orderForm")
-      .addEventListener(
-        "submit",
-        function (event) {
-
-          event.preventDefault();
-
-
-          const name =
-            document
-              .getElementById("customerName")
-              .value
-              .trim();
-
-
-          const service =
-            document
-              .getElementById("service")
-              .value;
-
-
-          const budget =
-            document
-              .getElementById("budget")
-              .value
-              .trim();
-
-
-          const details =
-            document
-              .getElementById("projectDetails")
-              .value
-              .trim();
-
-
-          const deadline =
-            document
-              .getElementById("deadline")
-              .value;
-
-
-          const selectedOption =
-            serviceSelect.options[
-              serviceSelect.selectedIndex
-            ];
-
-
-          const startingPrice =
-            selectedOption.getAttribute(
-              "data-price"
-            ) || "Not specified";
-
-
-          const message =
-`Hello Danny Hub 👋
-
-I want to place an order.
-
-━━━━━━━━━━━━━━━━
-CUSTOMER DETAILS
-━━━━━━━━━━━━━━━━
-
-Name:
-${name}
-
-Service:
-${service}
-
-Starting Price:
-${startingPrice}
-
-My Budget:
-${budget ? "₦" + budget : "Not specified"}
-
-Project Details:
-${details}
-
-Preferred Delivery Date:
-${deadline || "Not specified"}
-
-━━━━━━━━━━━━━━━━
-
-Please confirm the final price and
-let me know the next steps.
-
-Thank you.`;
-
-
-          const whatsappNumber =
-            "2347014939418";
-
-
-          const whatsappURL =
-            "https://wa.me/" +
-            whatsappNumber +
-            "?text=" +
-            encodeURIComponent(message);
-
-
-          window.open(
-            whatsappURL,
-            "_blank"
-          );
-
-        }
-      );
-
-  </script>
-
-</body>
-</html>
+    /* ==================================================
+       PROGRESS
+       ================================================== */
+
+    .progress-box {
+      background: #080e17;
+      border: 1px solid #263342;
+      border-radius: 15px;
+      padding: 18px;
+      margin-bottom: 20px;
+    }
+
+    .progress {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .progress::before {
+      content: "";
+      position: absolute;
+      top: 17px;
+      left: 8%;
+      right: 8%;
+      height: 2px;
+      background: #263342;
+    }
+
+    .progress-item {
+      position:
