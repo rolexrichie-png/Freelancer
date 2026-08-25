@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Danny Hub | Freelance Services</title>
 
   <style>
@@ -19,9 +20,9 @@
 
     body {
       background: #02060d;
-      color: white;
-      line-height: 1.5;
-      padding-bottom: 80px;
+      color: #ffffff;
+      line-height: 1.6;
+      padding-bottom: 85px;
     }
 
     a {
@@ -29,12 +30,12 @@
       color: inherit;
     }
 
-    /* HEADER */
+    /* =========================
+       HEADER
+    ========================= */
+
     header {
-      padding: 18px 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      width: 100%;
       background: #030912;
       border-bottom: 1px solid #12304f;
       position: sticky;
@@ -42,9 +43,23 @@
       z-index: 1000;
     }
 
+    .header-inner {
+      width: 92%;
+      max-width: 1200px;
+      margin: auto;
+      min-height: 76px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
     .logo {
-      font-size: 24px;
-      font-weight: 800;
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      white-space: nowrap;
     }
 
     .logo span {
@@ -53,12 +68,15 @@
 
     .nav {
       display: flex;
+      align-items: center;
       gap: 25px;
     }
 
     .nav a {
       color: #cbd5e1;
       font-size: 14px;
+      font-weight: 600;
+      transition: 0.3s;
     }
 
     .nav a:hover {
@@ -70,40 +88,86 @@
       padding: 11px 18px;
       border-radius: 9px;
       font-weight: bold;
+      white-space: nowrap;
     }
 
-    /* MAIN */
+    .menu-btn {
+      display: none;
+      border: 1px solid #24517d;
+      background: #071321;
+      color: white;
+      width: 43px;
+      height: 43px;
+      border-radius: 10px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    /* =========================
+       MAIN CONTAINER
+    ========================= */
+
     .container {
       width: 92%;
       max-width: 1200px;
       margin: auto;
     }
 
-    /* HERO */
+    /* =========================
+       HERO BOX
+    ========================= */
+
+    .hero-box {
+      margin-top: 28px;
+      padding: 8px;
+      border: 1px solid #174a7b;
+      border-radius: 25px;
+      background: #030b15;
+      box-shadow: 0 10px 40px rgba(0, 119, 255, 0.08);
+    }
+
     .hero {
-      margin-top: 25px;
-      padding: 45px 35px;
-      border: 1px solid #087cff;
-      border-radius: 22px;
+      min-height: 500px;
+      padding: 55px 45px;
+
+      display: flex;
+      align-items: center;
+
+      border-radius: 19px;
+
       background:
-        radial-gradient(circle at 80% 30%, rgba(0, 119, 255, .35), transparent 35%),
-        linear-gradient(135deg, #02050b, #031936);
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(0, 119, 255, 0.35),
+          transparent 35%
+        ),
+        linear-gradient(
+          135deg,
+          #02050b,
+          #031936
+        );
+    }
+
+    .hero-content {
+      max-width: 760px;
     }
 
     .welcome {
       display: inline-block;
       background: #073b91;
-      padding: 6px 14px;
-      border-radius: 20px;
+      color: white;
+      padding: 7px 15px;
+      border-radius: 30px;
       font-size: 12px;
       font-weight: bold;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
     }
 
     .hero h1 {
-      font-size: clamp(45px, 8vw, 72px);
-      line-height: 1;
-      margin-bottom: 15px;
+      font-size: clamp(48px, 8vw, 82px);
+      line-height: 0.98;
+      margin-bottom: 20px;
+      letter-spacing: -2px;
     }
 
     .hero h1 span {
@@ -111,52 +175,69 @@
     }
 
     .hero h2 {
-      font-size: 22px;
-      margin-bottom: 12px;
+      font-size: 24px;
+      margin-bottom: 14px;
     }
 
     .hero p {
       color: #b6c1cf;
-      max-width: 650px;
-      margin-bottom: 25px;
+      max-width: 680px;
+      font-size: 16px;
+      margin-bottom: 30px;
     }
 
     .buttons {
       display: flex;
-      gap: 12px;
+      gap: 13px;
       flex-wrap: wrap;
     }
 
     .primary,
     .secondary {
-      padding: 13px 22px;
-      border-radius: 9px;
+      padding: 14px 23px;
+      border-radius: 10px;
       font-weight: bold;
       display: inline-block;
+      transition: 0.3s;
     }
 
     .primary {
       background: #087cff;
     }
 
-    .secondary {
-      border: 1px solid #087cff;
+    .primary:hover {
+      background: #0068dc;
+      transform: translateY(-2px);
     }
 
-    /* SECTIONS */
-    section {
-      margin-top: 35px;
+    .secondary {
+      border: 1px solid #087cff;
+      color: #dcecff;
+    }
+
+    .secondary:hover {
+      background: #087cff;
+    }
+
+    /* =========================
+       OUTER SECTION BOXES
+    ========================= */
+
+    .section-box {
+      margin-top: 30px;
+      padding: 25px;
+      background: #030a13;
+      border: 1px solid #162f4a;
+      border-radius: 20px;
     }
 
     .section-title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     .section-title h2 {
-      font-size: 18px;
+      font-size: 25px;
+      margin-bottom: 5px;
     }
 
     .section-title h2::before {
@@ -166,42 +247,47 @@
       background: #087cff;
       display: inline-block;
       border-radius: 50%;
-      margin-right: 8px;
+      margin-right: 9px;
+      vertical-align: middle;
     }
 
-    .view {
-      color: #4b9cff;
+    .section-title p {
+      color: #8797a9;
       font-size: 13px;
     }
 
-    /* SERVICE BOXES */
+    /* =========================
+       SERVICES
+    ========================= */
+
     .services {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 14px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
     }
 
     .card {
-      background: #080e17;
-      border: 1px solid #263342;
-      border-radius: 14px;
-      padding: 20px;
-      min-height: 250px;
-      transition: .3s;
+      background: #080f19;
+      border: 1px solid #263b50;
+      border-radius: 15px;
+      padding: 22px;
+      min-height: 245px;
+      transition: 0.3s;
     }
 
     .card:hover {
       border-color: #087cff;
       transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(0, 119, 255, 0.12);
     }
 
     .icon {
       font-size: 34px;
-      margin-bottom: 15px;
+      margin-bottom: 13px;
     }
 
     .card h3 {
-      font-size: 16px;
+      font-size: 17px;
       margin-bottom: 9px;
     }
 
@@ -217,6 +303,7 @@
       text-align: center;
       border-radius: 8px;
       font-weight: bold;
+      color: #ffffff;
     }
 
     .price small {
@@ -226,77 +313,96 @@
       font-weight: normal;
     }
 
-    /* QUICK SERVICES */
+    /* =========================
+       QUICK SERVICES
+    ========================= */
+
     .quick {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 12px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
     }
 
     .quick-box {
-      background: #080e17;
-      border: 1px solid #263342;
-      border-radius: 12px;
-      padding: 18px 8px;
+      background: #080f19;
+      border: 1px solid #263b50;
+      border-radius: 14px;
+      padding: 22px 12px;
       text-align: center;
+      transition: 0.3s;
     }
 
     .quick-box:hover {
       border-color: #087cff;
+      transform: translateY(-3px);
     }
 
     .quick-box div {
-      font-size: 25px;
-      margin-bottom: 7px;
+      font-size: 28px;
+      margin-bottom: 8px;
     }
 
     .quick-box span {
-      font-size: 12px;
+      font-size: 13px;
+      color: #d4deea;
     }
 
-    /* HOW IT WORKS */
+    /* =========================
+       HOW IT WORKS
+    ========================= */
+
     .steps {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
+      gap: 15px;
     }
 
     .step {
-      background: #080e17;
-      border: 1px solid #263342;
-      border-radius: 14px;
-      padding: 22px;
+      background: #080f19;
+      border: 1px solid #263b50;
+      border-radius: 15px;
+      padding: 23px 15px;
       text-align: center;
     }
 
     .number {
-      width: 42px;
-      height: 42px;
+      width: 44px;
+      height: 44px;
       background: #087cff;
       border-radius: 50%;
+
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 0 auto 13px;
+
+      margin: 0 auto 14px;
       font-weight: bold;
+      font-size: 16px;
+    }
+
+    .step h3 {
+      font-size: 15px;
     }
 
     .step p {
       color: #aeb8c5;
-      font-size: 13px;
+      font-size: 12px;
       margin-top: 7px;
     }
 
-    /* BENEFITS */
+    /* =========================
+       BENEFITS
+    ========================= */
+
     .benefits {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 14px;
+      gap: 13px;
     }
 
     .benefit {
-      background: #080e17;
-      border: 1px solid #263342;
+      background: #080f19;
+      border: 1px solid #263b50;
       border-radius: 14px;
       padding: 22px 12px;
       text-align: center;
@@ -317,46 +423,162 @@
       font-size: 12px;
     }
 
-    /* CTA */
+    /* =========================
+       ABOUT BOX
+    ========================= */
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 20px;
+    }
+
+    .about-card {
+      background: #080f19;
+      border: 1px solid #263b50;
+      border-radius: 15px;
+      padding: 25px;
+    }
+
+    .about-card h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .about-card p {
+      color: #aeb8c5;
+      font-size: 14px;
+    }
+
+    .about-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .about-item {
+      background: #071321;
+      border: 1px solid #1c3b59;
+      border-radius: 10px;
+      padding: 13px;
+      color: #d4deea;
+      font-size: 13px;
+    }
+
+    /* =========================
+       CTA BOX
+    ========================= */
+
     .cta {
-      background: linear-gradient(100deg, #031c4c, #063c9a);
+      margin-top: 30px;
+
+      background:
+        radial-gradient(
+          circle at 80% 50%,
+          rgba(0, 119, 255, 0.35),
+          transparent 40%
+        ),
+        linear-gradient(
+          100deg,
+          #031c4c,
+          #063c9a
+        );
+
       border: 1px solid #087cff;
-      border-radius: 17px;
-      padding: 28px;
+      border-radius: 20px;
+      padding: 35px;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
+      gap: 25px;
+    }
+
+    .cta h2 {
+      font-size: 28px;
+      margin-bottom: 8px;
     }
 
     .cta p {
       color: #c7d5e8;
+      font-size: 14px;
+      max-width: 600px;
+    }
+
+    .cta .primary {
+      background: white;
+      color: #031936;
+      white-space: nowrap;
+    }
+
+    /* =========================
+       CONTACT BOX
+    ========================= */
+
+    .contact-box {
+      text-align: center;
+    }
+
+    .contact-box p {
+      color: #aeb8c5;
+      margin-bottom: 20px;
+    }
+
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .contact-item {
+      background: #080f19;
+      border: 1px solid #263b50;
+      border-radius: 13px;
+      padding: 18px;
+    }
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .contact-item span {
+      color: #aeb8c5;
       font-size: 13px;
     }
 
-    /* FOOTER */
+    /* =========================
+       FOOTER
+    ========================= */
+
     footer {
       margin-top: 40px;
-      padding: 25px;
+      padding: 30px 20px;
       text-align: center;
       color: #7f8b99;
       border-top: 1px solid #17212e;
       font-size: 12px;
     }
 
-    /* MOBILE NAV */
+    footer strong {
+      color: #087cff;
+    }
+
+    /* =========================
+       MOBILE BOTTOM NAV
+    ========================= */
+
     .mobile-nav {
       display: none;
     }
 
-    /* TABLET */
-    @media (max-width: 1000px) {
-      .services {
-        grid-template-columns: repeat(3, 1fr);
-      }
+    /* =========================
+       TABLET
+    ========================= */
 
-      .quick {
-        grid-template-columns: repeat(3, 1fr);
+    @media (max-width: 1000px) {
+
+      .services {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .benefits {
@@ -366,56 +588,142 @@
       .steps {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .about-content {
+        grid-template-columns: 1fr;
+      }
     }
 
-    /* PHONE */
+    /* =========================
+       PHONE
+    ========================= */
+
     @media (max-width: 700px) {
+
+      body {
+        padding-bottom: 78px;
+      }
+
+      .header-inner {
+        min-height: 68px;
+      }
 
       .nav,
       .header-btn {
         display: none;
       }
 
+      .menu-btn {
+        display: block;
+      }
+
+      .container {
+        width: 94%;
+      }
+
+      /* HERO */
+
+      .hero-box {
+        margin-top: 18px;
+        padding: 5px;
+        border-radius: 18px;
+      }
+
       .hero {
-        padding: 35px 22px;
+        min-height: auto;
+        padding: 38px 22px;
+        border-radius: 14px;
       }
 
       .hero h1 {
-        font-size: 48px;
+        font-size: 50px;
       }
 
-      .services {
-        grid-template-columns: repeat(2, 1fr);
+      .hero h2 {
+        font-size: 19px;
       }
+
+      .hero p {
+        font-size: 14px;
+      }
+
+      /* SECTION BOX */
+
+      .section-box {
+        margin-top: 22px;
+        padding: 17px;
+        border-radius: 17px;
+      }
+
+      .section-title h2 {
+        font-size: 21px;
+      }
+
+      /* SERVICES */
+
+      .services {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .card {
+        min-height: auto;
+      }
+
+      /* QUICK */
 
       .quick {
         grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
       }
+
+      /* STEPS */
 
       .steps {
         grid-template-columns: 1fr;
       }
 
+      /* BENEFITS */
+
       .benefits {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
       }
 
+      /* CONTACT */
+
+      .contact-info {
+        grid-template-columns: 1fr;
+      }
+
+      /* CTA */
+
       .cta {
+        padding: 25px 20px;
         flex-direction: column;
         align-items: flex-start;
       }
+
+      .cta h2 {
+        font-size: 24px;
+      }
+
+      /* MOBILE NAV */
 
       .mobile-nav {
         position: fixed;
         bottom: 0;
         left: 0;
+
         width: 100%;
         height: 68px;
-        background: #050b13;
+
+        background: rgba(5, 11, 19, 0.97);
         border-top: 1px solid #263342;
+
         display: flex;
         justify-content: space-around;
         align-items: center;
+
         z-index: 2000;
       }
 
@@ -427,7 +735,8 @@
 
       .mobile-nav span {
         display: block;
-        font-size: 20px;
+        font-size: 19px;
+        margin-bottom: 2px;
       }
 
       .mobile-nav .active {
@@ -437,16 +746,30 @@
 
     @media (max-width: 430px) {
 
-      .services {
-        grid-template-columns: 1fr;
-      }
-
-      .benefits {
-        grid-template-columns: 1fr;
+      .logo {
+        font-size: 21px;
       }
 
       .hero h1 {
-        font-size: 42px;
+        font-size: 43px;
+      }
+
+      .hero {
+        padding: 32px 18px;
+      }
+
+      .quick {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .primary,
+      .secondary {
+        text-align: center;
+        width: 100%;
       }
     }
   </style>
@@ -454,61 +777,509 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- =========================
+       HEADER
+  ========================= -->
+
   <header>
+    <div class="header-inner">
 
-    <a href="index.html" class="logo">
-      DANNY <span>HUB</span>
-    </a>
+      <a href="index.html" class="logo">
+        DANNY <span>HUB</span>
+      </a>
 
-    <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="#how">How It Works</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="#how">How It Works</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-    <a href="order.html" class="header-btn">
-      Order Now
-    </a>
+      <a href="order.html" class="header-btn">
+        Order Now
+      </a>
 
+      <button class="menu-btn" onclick="toggleMenu()">
+        ☰
+      </button>
+
+    </div>
   </header>
 
 
   <main class="container">
 
-    <!-- HERO -->
-    <section class="hero">
+    <!-- =========================
+         HERO
+    ========================= -->
 
-      <span class="welcome">WELCOME TO</span>
+    <div class="hero-box">
 
-      <h1>
-        Danny <span>Hub</span>
-      </h1>
+      <section class="hero">
 
-      <h2>Your All-in-One Freelance Solution</h2>
+        <div class="hero-content">
 
-      <p>
-        Professional freelance services for businesses,
-        brands and individuals. Get quality work,
-        fast communication and reliable service.
-      </p>
+          <span class="welcome">
+            WELCOME TO DANNY HUB
+          </span>
 
-      <div class="buttons">
+          <h1>
+            Start Your
+            <span>Project</span>
+          </h1>
 
-        <a href="order.html" class="primary">
-          Order Now 🛒
-        </a>
+          <h2>
+            Your All-in-One Freelance Solution
+          </h2>
 
-        <a href="services.html" class="secondary">
-          View Services →
-        </a>
+          <p>
+            Professional freelance services for businesses,
+            brands and individuals. Get quality work,
+            fast communication and reliable service.
+          </p>
+
+          <div class="buttons">
+
+            <a href="order.html" class="primary">
+              Start a Project 🛒
+            </a>
+
+            <a href="services.html" class="secondary">
+              View Services →
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <!-- =========================
+         MAIN SERVICES
+    ========================= -->
+
+    <section class="section-box">
+
+      <div class="section-title">
+        <h2>Our Main Services</h2>
+        <p>Professional services for your next project.</p>
+      </div>
+
+      <div class="services">
+
+        <div class="card">
+          <div class="icon">🎨</div>
+          <h3>Graphics Design</h3>
+          <p>
+            Logos, flyers, posters, banners, social media
+            designs and other professional graphics.
+          </p>
+          <div class="price">
+            From ₦3,000
+            <small>Price depends on project</small>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎬</div>
+          <h3>Video Editing</h3>
+          <p>
+            Clean and engaging video editing for social
+            media, adverts, events and personal projects.
+          </p>
+          <div class="price">
+            From ₦5,000
+            <small>Price depends on project</small>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="icon">📱</div>
+          <h3>Social Media Services</h3>
+          <p>
+            Social media support, content assistance and
+            growth-focused services for online brands.
+          </p>
+          <div class="price">
+            From ₦2,000
+            <small>Price depends on service</small>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="icon">✍️</div>
+          <h3>Writing Services</h3>
+          <p>
+            Articles, captions, product descriptions,
+            proofreading and other writing tasks.
+          </p>
+          <div class="price">
+            From ₦2,000
+            <small>Price depends on project</small>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="icon">💻</div>
+          <h3>Online Tasks</h3>
+          <p>
+            Get assistance with various digital and
+            online tasks based on your project needs.
+          </p>
+          <div class="price">
+            From ₦2,000
+            <small>Price depends on task</small>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="icon">🌐</div>
+          <h3>Website Assistance</h3>
+          <p>
+            Basic website creation, editing and assistance
+            with your online presence.
+          </p>
+          <div class="price">
+            From ₦10,000
+            <small>Price depends on project</small>
+          </div>
+        </div>
 
       </div>
 
     </section>
 
 
-    <!-- SERVICES -->
-    <section
+    <!-- =========================
+         QUICK SERVICES
+    ========================= -->
+
+    <section class="section-box">
+
+      <div class="section-title">
+        <h2>Quick Services</h2>
+        <p>Small jobs we can help you complete.</p>
+      </div>
+
+      <div class="quick">
+
+        <div class="quick-box">
+          <div>🖼️</div>
+          <span>Flyer Design</span>
+        </div>
+
+        <div class="quick-box">
+          <div>🎞️</div>
+          <span>Video Editing</span>
+        </div>
+
+        <div class="quick-box">
+          <div>✍️</div>
+          <span>Content Writing</span>
+        </div>
+
+        <div class="quick-box">
+          <div>📸</div>
+          <span>Social Media Design</span>
+        </div>
+
+        <div class="quick-box">
+          <div>💻</div>
+          <span>Website Help</span>
+        </div>
+
+        <div class="quick-box">
+          <div>📄</div>
+          <span>Document Work</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         HOW IT WORKS
+    ========================= -->
+
+    <section class="section-box" id="how">
+
+      <div class="section-title">
+        <h2>How It Works</h2>
+        <p>Getting your project started is simple.</p>
+      </div>
+
+      <div class="steps">
+
+        <div class="step">
+          <div class="number">1</div>
+          <h3>Choose a Service</h3>
+          <p>
+            Select the service that matches what you need.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="number">2</div>
+          <h3>Place Your Order</h3>
+          <p>
+            Tell us about your project and requirements.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="number">3</div>
+          <h3>We Work</h3>
+          <p>
+            Your project is prepared according to your request.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="number">4</div>
+          <h3>Receive Your Work</h3>
+          <p>
+            Get your completed project when it is ready.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         WHY CHOOSE US
+    ========================= -->
+
+    <section class="section-box">
+
+      <div class="section-title">
+        <h2>Why Choose Danny Hub?</h2>
+        <p>Our goal is to make your project easier.</p>
+      </div>
+
+      <div class="benefits">
+
+        <div class="benefit">
+          <div class="benefit-icon">⚡</div>
+          <h3>Fast Response</h3>
+          <p>Quick communication about your project.</p>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit-icon">💎</div>
+          <h3>Quality Work</h3>
+          <p>We focus on delivering useful results.</p>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit-icon">💰</div>
+          <h3>Fair Pricing</h3>
+          <p>Prices depend on the actual project.</p>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit-icon">🤝</div>
+          <h3>Easy Communication</h3>
+          <p>Discuss your requirements clearly.</p>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit-icon">🔒</div>
+          <h3>Reliable Service</h3>
+          <p>Your project requirements matter to us.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section class="section-box" id="about">
+
+      <div class="section-title">
+        <h2>About Danny Hub</h2>
+        <p>Digital services made simple.</p>
+      </div>
+
+      <div class="about-content">
+
+        <div class="about-card">
+
+          <h3>Helping You Get Things Done</h3>
+
+          <p>
+            Danny Hub provides freelance and digital services
+            for individuals, businesses, creators and brands.
+            Whether you need a design, video, writing service,
+            website assistance or another online task, you can
+            send your requirements and receive a clear response.
+          </p>
+
+        </div>
+
+        <div class="about-card">
+
+          <h3>What We Focus On</h3>
+
+          <div class="about-list">
+
+            <div class="about-item">
+              ✓ Clear communication
+            </div>
+
+            <div class="about-item">
+              ✓ Professional presentation
+            </div>
+
+            <div class="about-item">
+              ✓ Reliable project handling
+            </div>
+
+            <div class="about-item">
+              ✓ Customer satisfaction
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================= -->
+
+    <section class="cta">
+
+      <div>
+        <h2>Ready to Start?</h2>
+
+        <p>
+          Tell Danny Hub what you need and send your
+          project request today.
+        </p>
+      </div>
+
+      <a href="order.html" class="primary">
+        Start Your Order →
+      </a>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section class="section-box contact-box" id="contact">
+
+      <div class="section-title">
+        <h2>Contact Danny Hub</h2>
+        <p>Have a question about a project?</p>
+      </div>
+
+      <p>
+        Send your requirements and we will respond with
+        the next steps for your project.
+      </p>
+
+      <div class="contact-info">
+
+        <div class="contact-item">
+          <strong>💬 WhatsApp</strong>
+          <span>Available for project discussions</span>
+        </div>
+
+        <div class="contact-item">
+          <strong>📦 Orders</strong>
+          <span>Submit your project through the order page</span>
+        </div>
+
+        <div class="contact-item">
+          <strong>🛠️ Services</strong>
+          <span>Explore all available services</span>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <strong>DANNY HUB</strong>
+
+    <br><br>
+
+    Freelance Services • Digital Solutions • Online Tasks
+
+    <br><br>
+
+    © 2026 Danny Hub. All rights reserved.
+
+  </footer>
+
+
+  <!-- =========================
+       MOBILE NAVIGATION
+  ========================= -->
+
+  <nav class="mobile-nav">
+
+    <a href="index.html" class="active">
+      <span>⌂</span>
+      Home
+    </a>
+
+    <a href="services.html">
+      <span>▦</span>
+      Services
+    </a>
+
+    <a href="order.html">
+      <span>＋</span>
+      Order
+    </a>
+
+    <a href="#about">
+      <span>ⓘ</span>
+      About
+    </a>
+
+    <a href="#contact">
+      <span>☎</span>
+      Contact
+    </a>
+
+  </nav>
+
+
+  <script>
+
+    function toggleMenu() {
+      alert("Use the bottom navigation to move around Danny Hub.");
+    }
+
+  </script>
+
+</body>
+</html>
